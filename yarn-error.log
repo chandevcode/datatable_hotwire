@@ -1,0 +1,48 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn build --watch
+
+PATH: 
+  /home/chan/.rvm/gems/ruby-3.1.2/bin:/home/chan/.rvm/gems/ruby-3.1.2@global/bin:/home/chan/.rvm/rubies/ruby-3.1.2/bin:/home/chan/.rvm/bin:/home/chan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/chan/Dev/ROR/datatable/package.json: Unexpected token } in JSON at position 339
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "app",
+    "private": "true",
+    "dependencies": {
+      "@hotwired/stimulus": "^3.2.1",
+      "@hotwired/turbo-rails": "^7.2.5",
+      "@popperjs/core": "^2.11.6",
+      "autoprefixer": "^10.4.13",
+      "bootstrap": "^5.2.3",
+      "bootstrap-icons": "^1.10.3",
+      "esbuild": "^0.17.10",
+      "postcss": "^8.4.21",
+      "sass": "^1.58.3",
+    },
+    "scripts": {
+      "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    },
+  },
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

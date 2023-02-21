@@ -10,11 +10,11 @@ class EmployeesController < ApplicationController
   end
 
   def sort_column
-    %(name position office age start_date).include?(params[:sort]) ? params[:sort] : 'name'
+    %w[name position office age start_date].include?(params[:sort]) ? params[:sort] : 'name'
   end
 
   def sort_direction
-    %(asc desc).include?(params[:direction]) ? params[:direction] : 'asc'
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : 'asc'
   end
 
   # GET /employees/1 or /employees/1.json
